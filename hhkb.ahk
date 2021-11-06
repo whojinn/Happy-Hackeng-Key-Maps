@@ -64,6 +64,8 @@ ctrl_d(){
     Return
 }
 
+; 以下、コマンド入力。
+
 ^h::Send, {Backspace}
 ^d::Send, {Delete}
 ^p::Send, {Up}
