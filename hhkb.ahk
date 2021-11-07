@@ -26,13 +26,19 @@
 ; +	Shiftキー
 ; #	Winキー
 
-alt_left(){
-    Send, !{Left}
+ctrl_p()
+{
+    Hotkey, ^p,Off
+    Send, ^p
+    Hotkey, ^p,On
     Return
 }
 
-alt_right(){
-    Send, !{Right}
+ctrl_n()
+{
+    Hotkey, ^n,Off
+    Send, ^n
+    Hotkey, ^n,On
     Return
 }
 
@@ -83,5 +89,7 @@ ctrl_d(){
 
 +^h::ctrl_h()
 +^d::ctrl_d()
++^p::ctrl_p()
++^n::ctrl_n()
 +^f::ctrl_f()
 +^b::ctrl_b()
