@@ -2,6 +2,7 @@
 AutoHotKeyでHHKBをさらにいい感じにしてみた。
 
 # 機能要約
+WindowsTerminalをアクティブにしていない（入力可能状態にしていない）時において:
 - `Ctrl+c -> BackSpace`
 - `Ctrl+d -> Delete`
 - `Ctrl+p -> UpAllow`
@@ -14,6 +15,8 @@ AutoHotKeyでHHKBをさらにいい感じにしてみた。
 - `Alt+n -> Ctrl+DownAllow`
 - `Alt+f -> Ctrl+RightAllow`
 - `Alt+b -> Ctrl+LeftAllow`
+- `Ctrl+Shift+h -> Ctrl+h`
+- `Ctrl+Shift+d -> Ctrl+d`
 - `Ctrl+Shift+p -> Ctrl+p`
 - `Ctrl+Shift+n -> Ctrl+n`
 - `Ctrl+Shift+f -> Ctrl+f`
