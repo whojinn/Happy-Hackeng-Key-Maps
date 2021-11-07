@@ -66,6 +66,7 @@ ctrl_d(){
 
 ; 以下、コマンド入力。
 
+#IfWinNotActive ahk_exe WindowsTerminal.exe
 ^h::Send, {Backspace}
 ^d::Send, {Delete}
 ^p::Send, {Up}
