@@ -28,6 +28,7 @@
 ; 以下、コマンド入力。
 
 #If !WinActive("ahk_exe WindowsTerminal.exe","","powershell")
+    ^h::Send, {BackSpace}
     ^d::Send, {Delete}
     ^p::Send, {Up}
     ^n::Send, {Down}
