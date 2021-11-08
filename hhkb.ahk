@@ -20,76 +20,30 @@
 ; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ; SOFTWARE.
 
-
 ; ^	Ctrlキー
 ; !	Altキー
 ; +	Shiftキー
 ; #	Winキー
 
-ctrl_p()
-{
-    Hotkey, ^p,Off
-    Send, ^p
-    Hotkey, ^p,On
-    Return
-}
-
-ctrl_n()
-{
-    Hotkey, ^n,Off
-    Send, ^n
-    Hotkey, ^n,On
-    Return
-}
-
-ctrl_f(){
-    Hotkey, ^f,Off
-    Send, ^f
-    Hotkey, ^f,On
-    Return
-}
-
-ctrl_b(){
-    Hotkey, ^b,Off
-    Send, ^b
-    Hotkey, ^b,on
-    Return
-}
-
-ctrl_h(){
-    Hotkey, ^h,Off
-    Send, ^h
-    Hotkey, ^h,on
-    Return
-}
-
-ctrl_d(){
-    Hotkey, ^d,Off
-    Send, ^d
-    Hotkey, ^d,on
-    Return
-}
-
 ; 以下、コマンド入力。
 
-#IfWinNotActive ahk_exe WindowsTerminal.exe
-^h::Send, {Backspace}
-^d::Send, {Delete}
-^p::Send, {Up}
-^n::Send, {Down}
-^f::send, {Right}
-^b::Send, {Left}
-
-!h::Send, ^{BackSpace}
-!d::Send, ^{Delete}
-!p::Send, ^{Up}
-!n::Send, ^{Down}
-!f::send, ^{Right}
-!b::Send, ^{Left}
-
-+^h::ctrl_h()
-+^d::ctrl_d()
-+^p::ctrl_p()
-+^n::ctrl_n()
-+^f::ctrl_f()
-+^b::ctrl_b()
+#If !WinActive("ahk_exe WindowsTerminal.exe","","powershell")
+    ^d::Send, {Delete}
+    ^p::Send, {Up}
+    ^n::Send, {Down}
+    ^f::send, {Right}
+    ^b::Send, {Left}
+    ^u::Send, ^z
+    !h::Send, ^{BackSpace}
+    !d::Send, ^{Delete}
+    !p::Send, ^{Up}
+    !n::Send, ^{Down}
+    !f::send, ^{Right}
+    !b::Send, ^{Left}
+    +^h::Send, ^h
+    +^d::Send, ^d
+    +^p::Send, ^p
+    +^n::Send, ^n
+    +^f::Send, ^f
+    +^b::Send, ^b
+#If
