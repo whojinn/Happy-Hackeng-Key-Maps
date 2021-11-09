@@ -27,7 +27,7 @@
 
 ; 以下、コマンド入力。
 
-#If !WinActive("ahk_exe WindowsTerminal.exe","","powershell")
+#If !WinActive("ahk_exe WindowsTerminal.exe","","Windows PowerShell")
     ^h::Send, {BackSpace}
     ^d::Send, {Delete}
     ^p::Send, {Up}
