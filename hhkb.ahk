@@ -1,4 +1,4 @@
-; MIT License
+﻿; MIT License
 ;
 ; Copyright (c) 2021 whojinn
 ;
@@ -32,14 +32,16 @@
     ^d::Send, {Delete}
     ^p::Send, {Up}
     ^n::Send, {Down}
-    ^f::send, {Right}
+    ^f::Send, {Right}
     ^b::Send, {Left}
-    ^u::Send, ^z
+    ^u::^z
+    ^j::Send, {vk1Csc079}   ;変換キー
+    ^e::Send, {vk1Dsc07B}   ;無変換キー
     !h::Send, ^{BackSpace}
     !d::Send, ^{Delete}
     !p::Send, ^{Up}
     !n::Send, ^{Down}
-    !f::send, ^{Right}
+    !f::Send, ^{Right}
     !b::Send, ^{Left}
     +^h::Send, ^h
     +^d::Send, ^d
@@ -47,4 +49,30 @@
     +^n::Send, ^n
     +^f::Send, ^f
     +^b::Send, ^b
+    +^j::Send, ^j
+    +^e::Send, ^e
+#If !WinActive("ahk_exe WindowsTerminal.exe","","設定")
+    ^h::Send, {BackSpace}
+    ^d::Send, {Delete}
+    ^p::Send, {Up}
+    ^n::Send, {Down}
+    ^f::Send, {Right}
+    ^b::Send, {Left}
+    ^u::^z
+    ^j::Send, {vk1Csc079}   ;変換キー
+    ^e::Send, {vk1Dsc07B}   ;無変換キー
+    !h::Send, ^{BackSpace}
+    !d::Send, ^{Delete}
+    !p::Send, ^{Up}
+    !n::Send, ^{Down}
+    !f::Send, ^{Right}
+    !b::Send, ^{Left}
+    +^h::Send, ^h
+    +^d::Send, ^d
+    +^p::Send, ^p
+    +^n::Send, ^n
+    +^f::Send, ^f
+    +^b::Send, ^b
+    +^j::Send, ^j
+    +^e::Send, ^e
 #If
