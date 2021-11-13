@@ -2,13 +2,15 @@
 AutoHotKeyでHHKBをさらにいい感じにしてみた。
 
 # 機能要約
-WindowsTerminalをアクティブにしていない（入力可能状態にしていない）時において:
+WindowsTerminalをアクティブにしていない（入力可能状態にしていない）時、なおかつそれが設定画面ではない場合において:
 - `Ctrl+c -> BackSpace`
 - `Ctrl+d -> Delete`
 - `Ctrl+p -> UpAllow`
 - `Ctrl+n -> DownAllow`
 - `Ctrl+f -> RightAllow`
 - `Ctrl+b -> LeftAllow`
+- `Ctrl+j -> 変換キー`
+- `Ctrl+e -> 無変換キー`
 - `Alt+c -> Ctrl+BackSpace`
 - `Alt+d -> Ctrl+Delete`
 - `Alt+p -> Ctrl+UpAllow`
