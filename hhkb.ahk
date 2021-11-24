@@ -45,13 +45,15 @@ Return
 
 ; 以下、コマンド入力。
 
-#If !WinActive("ahk_exe WindowsTerminal.exe","","設定")
+#If (!WinActive("ahk_exe WindowsTerminal.exe","","設定") && !WinActive("ahk_exe Code.exe",""))
     ^h::Send, {BackSpace}
     ^d::Send, {Delete}
     ^p::Send, {Up}
     ^n::Send, {Down}
     ^f::Send, {Right}
     ^b::Send, {Left}
+    ^a::Send, {Home}
+    ^e::Send, {End}
     ^u::^z
     !h::Send, ^{BackSpace}
     !d::Send, ^{Delete}
@@ -65,5 +67,6 @@ Return
     +^n::Send, ^n
     +^f::Send, ^f
     +^b::Send, ^b
-    +^j::Send, ^j
+    +^a::Send, ^a
     +^e::Send, ^e
+    +^u::+^z
