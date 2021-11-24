@@ -9,8 +9,10 @@ WindowsTerminalをアクティブにしていない（入力可能状態にし�
 - `Ctrl+n -> DownAllow`
 - `Ctrl+f -> RightAllow`
 - `Ctrl+b -> LeftAllow`
-- `Ctrl+j -> 変換キー`
-- `Ctrl+e -> 無変換キー`
+- `Ctrl+a -> Home`
+- `Ctrl+e -> End`
+- `(何も押さずに)右Alt -> 変換キー`
+- `(何も押さずに)左Alt -> 無変換キー`
 - `Alt+c -> Ctrl+BackSpace`
 - `Alt+d -> Ctrl+Delete`
 - `Alt+p -> Ctrl+UpAllow`
