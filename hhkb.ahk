@@ -25,24 +25,25 @@
 ; +	Shiftキー
 ; #	Winキー
 
-; 以下、コマンド入力。
+; Altキー空打ちで変換・無変換キーを送出するホットキー。
+; Author:     karakaram   http://www.karakaram.com/alt-ime-on-off
 
 *~LAlt::Send {Blind}{vk07}
 *~RAlt::Send {Blind}{vk07}
 
-; 左Altキーが単独で押された場合、無変換キーを入力する
 ~LAlt Up::
 if (A_PriorKey = "LAlt") {
     Send, {vkF3sc029}
 }
 Return
 
-; 右Altキーが単独で押された場合、変換キーを入力する
 ~RAlt Up::
 if (A_PriorKey = "RAlt") {
     Send, {vkF2sc070}
 }
 Return
+
+; 以下、コマンド入力。
 
 #If !WinActive("ahk_exe WindowsTerminal.exe","","設定")
     ^h::Send, {BackSpace}
